@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+// 添加子组件
+import Todo from './Todo';
+
 class App extends Component {
 
   constructor(props){
@@ -42,6 +45,8 @@ class App extends Component {
         <input type="text" ref={ input => this.input1 = input } />{/* 建议写法 */}
         <button onClick={this.btnFn}>{this.state.btnText}</button>
         <input onBlur={this.blurFn} type="text" ref={ input => this.input2 = input } />
+
+        <Todo />
       </div>
     );
   }
