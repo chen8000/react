@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 // 添加子组件
 import Todo from './Todo';
+import Form from './form';
 
 class App extends Component {
 
@@ -47,6 +48,9 @@ class App extends Component {
         <input onBlur={this.blurFn} type="text" ref={ input => this.input2 = input } />
 
         <Todo />
+
+        <hr/>
+        <Form />
       </div>
     );
   }
