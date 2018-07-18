@@ -1,14 +1,26 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
 
-import '../index.css';
+import Header from './headfoot/header';
+import Footer from './headfoot/footer';
+import ContainerLeft from './containerLeft';
+import ContainerRight from './containerRight';
 
 export default class App extends Component {
     render(){
         return (
             <div>
-                <img className="img" src={logo} alt=""/>
-                <p>react app组件</p>
+                <Header />
+
+                <div className="container">
+                    <div className="containerLeft">
+                        <ContainerLeft />
+                    </div>
+                    <div className="containerRight">
+                        <ContainerRight />
+                    </div>
+                </div>
+
+                <Footer />
             </div>
         )
     }
