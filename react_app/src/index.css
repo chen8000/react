@@ -70,6 +70,7 @@ input:focus{
     padding:15px;
     border-radius:5px;
     position: relative;
+    margin-bottom:15px;
 }
 .reply button{
     position:absolute;
