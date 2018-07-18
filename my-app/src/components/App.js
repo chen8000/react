@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 // 添加子组件
 import Todo from './Todo';
 import Form from './form';
+import MountFn from './mountFn';
 
 class App extends Component {
 
@@ -48,9 +49,13 @@ class App extends Component {
         <input onBlur={this.blurFn} type="text" ref={ input => this.input2 = input } />
 
         <Todo />
-
         <hr/>
+
         <Form />
+        <hr/>
+
+        <MountFn msg="hello React"/>
+
       </div>
     );
   }
