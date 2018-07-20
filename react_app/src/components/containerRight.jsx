@@ -1,3 +1,5 @@
+
+
 import React, { Component } from 'react';
 
 export default class ContainerRight extends Component {
@@ -8,7 +10,7 @@ export default class ContainerRight extends Component {
         this.removeFn = this.removeFn.bind(this);
     }
 
-    removeFn(event){
+    removeFn = (event) => {
         let index = event.target.parentNode.getAttribute('index');
         
         this.props.removeFn(index);

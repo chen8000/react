@@ -24,17 +24,17 @@ export default class App extends Component {
     }
 
     // 修改列表数据
-    childUpdateFn(val){
+    childUpdateFn = (val) =>{
 
         let list = this.state.list;
-        list.push(val);
+        list.unshift(val);
 
         // 修改数据
         this.setState({ list });
     }
 
     // 删除数据
-    removeFn(index){
+    removeFn = (index) =>{
         let { list } = this.state;
         
         delete list[index];
