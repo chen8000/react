@@ -52,7 +52,7 @@ class Todo extends Component{
         if(initView){
             return (
 
-                <h2>请输入关键字搜索:{this.props.useName}</h2>
+                <h2>请输入关键字搜索{this.props.useName}</h2>
             )
         }else if(loading){
             return (
