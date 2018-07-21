@@ -5,8 +5,6 @@ import {NavLink, Switch, Route, Redirect} from 'react-router-dom';
 import Home from './home';
 import About from './about';
 
-
-
 class App extends Component {
 
     render(){
@@ -20,11 +18,11 @@ class App extends Component {
 
                     {/* 匹配路由 根据path指定加载不同模块 */}
                     <Switch>
-                        <Route path="/home" component={Home} />
-                        <Route path="/about" component={About} />
+                        <Route path="/home" activeClassName="active" component={Home} />
+                        <Route path="/about" activeClassName="active" component={About} />
 
                         {/* 路由重定向，默认定向到home */}
-                        <Redirect path="/home"/>
+                        <Redirect to="/home"/>
                     </Switch>
                 </div>
             </div>
