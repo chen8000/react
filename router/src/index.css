@@ -1,0 +1,30 @@
+
+*{margin:0;padding:0;}
+.container{
+    width:90%;
+    height:100%;
+    margin:0 auto;
+    height:800px;
+}
+.left{
+    width:10%;
+    height:100%;
+    border-right:1px solid #dfdfdf;
+    float:left;
+}
+.right{
+    width:89%;
+    float:left;
+    height:100%;
+}
+
+
+
+
+
+
+
+
+
+
+
