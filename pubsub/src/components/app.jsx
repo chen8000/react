@@ -2,11 +2,17 @@
 
 import React, { Component } from 'react';
 
+import Pub from './pub';
+import Sub from './sub';
+
 class App extends Component {
 
     render(){
         return (
-            <div>div</div>
+            <div>
+                <Pub />
+                <Sub />
+            </div>
         )
     }
 }
