@@ -1,0 +1,62 @@
+
+*{margin:0; padding:0;}
+.header{
+    background:#dfdfdf;
+    padding:30px 0;
+}
+.container{
+    width:90%;
+    margin:0 auto;
+}
+.todoBox{
+    padding:30px 0;
+}
+.todo ul li{
+    
+    list-style:none;
+    display:inline-block;
+    padding:20px;
+    text-align: center;
+    border:1px solid #dfdfdf;
+    margin-right:2%;
+    width:32%;
+    box-sizing: border-box;
+    margin-bottom:2%;
+    box-shadow: 0px 10px 12px #666;
+    border-radius:5px;
+    
+}
+.todo ul li:nth-child(3n){
+    margin-right:0;
+}
+
+.todo ul li img{
+    width:100%;
+}
+.searchBox input,
+.searchBox [type="text"]{
+    width:200px;
+    height:30px;
+    border:0;
+    outline:0;
+    border-radius:5px ;
+    padding:0 7px;
+    font-size:15px;
+}
+.searchBox [type="button"]{
+    width:100px;
+    margin-left:8px;
+    cursor:pointer;
+    background:rgb(72, 216, 137);
+    transition:all .2s ease;    
+    color:white;
+    
+}
+.searchBox [type="button"]:hover{
+    background:rgb(70, 182, 120);
+}
+
+
+
+
+
