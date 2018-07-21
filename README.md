@@ -15,4 +15,4 @@
 * render() 初始化渲染或更新数据时调用
 * componentDidMount() 开启监听，发送ajax请求
 * componentWillUnmount() 做一些清理工作，如清理定时器
-* componentWillReceiveProps()
+* componentWillReceiveProps(nextProps)  组件将要更新数据
