@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react'
-import { DECREMENT, INCREMENT } from '../redux/action-types'
+import * as actions from '../redux/actions'
+
 
 class App extends Component {
     
@@ -10,7 +11,7 @@ class App extends Component {
         let selectVal = Number(this.select.value)
         
         // 这里调用 dispatch({}) 方法，传入一个对象，最终接收参数的是处理数据的 reducers.js 里的方法
-        this.props.store.dispatch({ type:INCREMENT, data: selectVal})
+        this.props.store.dispatch(actions.increment(selectVal))
 
     }
 
@@ -18,7 +19,7 @@ class App extends Component {
         // 获取select的value 传给redux 告诉redux需要 - 
         let selectVal = Number(this.select.value)
         
-        this.props.store.dispatch({ type:DECREMENT, data:selectVal })
+        this.props.store.dispatch(actions.decrement(selectVal))
     }
 
     incrementIfOdd = () => {
@@ -26,7 +27,7 @@ class App extends Component {
         let selectVal = Number(this.select.value)
         // let newCount = count - selectVal
         if(count%2 === 1){
-            this.props.store.dispatch({ type:INCREMENT, data: selectVal})
+            this.props.store.dispatch(actions.increment(selectVal))
         }
 
         
@@ -38,7 +39,7 @@ class App extends Component {
         
 
         setTimeout(() => {
-            this.props.store.dispatch({ type:DECREMENT, data:selectVal })
+            this.props.store.dispatch(actions.decrement(selectVal))
         }, 1000)
 
     }
