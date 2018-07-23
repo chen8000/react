@@ -1,9 +1,17 @@
 
 import React, { Component } from 'react'
-import * as actions from '../redux/actions'
+import PropTypes from 'prop-types'
 
 
-class App extends Component {
+
+class Counter extends Component {
+
+    
+    static propTypes = {
+        count : PropTypes.number.isRequired,
+        increment : PropTypes.func.isRequired,
+        decrement : PropTypes.func.isRequired
+    }
     
 
     increment = () => {
@@ -11,7 +19,7 @@ class App extends Component {
         let selectVal = Number(this.select.value)
         
         // 这里调用 dispatch({}) 方法，传入一个对象，最终接收参数的是处理数据的 reducers.js 里的方法
-        this.props.store.dispatch(actions.increment(selectVal))
+        this.props.increment(selectVal)
 
     }
 
@@ -19,15 +27,15 @@ class App extends Component {
         // 获取select的value 传给redux 告诉redux需要 - 
         let selectVal = Number(this.select.value)
         
-        this.props.store.dispatch(actions.decrement(selectVal))
+        this.props.decrement(selectVal)
     }
 
     incrementIfOdd = () => {
-        let count = Number(this.props.store.getState())
+        let count = Number(this.props.count)
         let selectVal = Number(this.select.value)
         // let newCount = count - selectVal
         if(count%2 === 1){
-            this.props.store.dispatch(actions.increment(selectVal))
+            this.props.increment(selectVal)
         }
     }
 
@@ -37,7 +45,7 @@ class App extends Component {
         
 
         setTimeout(() => {
-            this.props.store.dispatch(actions.decrement(selectVal))
+            this.props.decrement(selectVal)
         }, 1000)
 
     }
@@ -46,7 +54,7 @@ class App extends Component {
     render(){
         return (
             <div>
-                <p>click {this.props.store.getState()} times</p>
+                <p>click {this.props.count} times</p>
                 <div>
                     <select ref={ select => this.select = select }>
                         <option value="1">1</option>
@@ -66,6 +74,7 @@ class App extends Component {
     }
 }
 
-export default App;
+
+export default Counter
 
 
