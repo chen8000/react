@@ -16,7 +16,7 @@ function render(){
 }
 
 // 初始化渲染
-render();
+render()
 
 // 订阅状态，当状态改变时重绘组件
 store.subscribe(render)
