@@ -29,8 +29,6 @@ class App extends Component {
         if(count%2 === 1){
             this.props.store.dispatch(actions.increment(selectVal))
         }
-
-        
     }
 
     incrementAsync = () => {

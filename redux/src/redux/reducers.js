@@ -15,7 +15,6 @@ import { INCREMENT, DECREMENT } from './action-types'
 */ 
 
 
-
 export function counter(state = 0, action) {
     
     switch(action.type){
