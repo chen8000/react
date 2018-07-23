@@ -1,22 +1,21 @@
 
 /*
-    1. 从redux导入 createStore 方法
-        import { createStore } from 'redux' 
+    1. 应用中间件实现异步编程  redux-thunk
+    
+    2. 从redux里导入 applyMiddleware 函数，
 
-    2. 导入reducers里声明的函数
-        import { counter } from './redux/reducers'
-        
-    3. 注册返回新数据的方法 counter 
-        const store = createStore(counter)
+    3. 引入redux-thunk
 
-    4. 导出store对象
+    4. 应用异步中间件
+        给createStore()函数传第二个参数，applyMiddleware(thunk) 
 */ 
 
 
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk'
 import { counter } from './reducers'
 
 // 注册状态
-const store = createStore(counter)
+const store = createStore(counter,applyMiddleware(thunk))
 
 export default store;

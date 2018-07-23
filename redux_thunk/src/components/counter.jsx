@@ -43,10 +43,7 @@ class Counter extends Component {
         
         let selectVal = Number(this.select.value)
         
-
-        setTimeout(() => {
-            this.props.decrement(selectVal)
-        }, 1000)
+        this.props.incrementAsync(selectVal);
 
     }
     
