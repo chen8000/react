@@ -11,11 +11,21 @@
 */ 
 
 
+/*
+    使用redux调试工具 redux-devtools 
+    1. 在chrome商店 搜索拓展程序 redux devtools 
+    2. 在需要使用调试工具的项目安装 redux-devtools-extension
+    3. import { composeWithDevTools } from 'redux-devtools-extension'
+    4. 把 applyMiddleware(thunk) 传入  composeWithDevTools() 函数
+*/ 
+
+
 import { createStore, applyMiddleware } from 'redux'
+import { composeWithDevTools } from 'redux-devtools-extension'
 import thunk from 'redux-thunk'
 import { counter } from './reducers'
 
 // 注册状态
-const store = createStore(counter,applyMiddleware(thunk))
+const store = createStore(counter,composeWithDevTools(applyMiddleware(thunk)))
 
 export default store;
