@@ -20,10 +20,10 @@ export function counter(state = initlist, action) {
             return [action.data, ...state]
 
         // 删除
-        case DELETE :
+        case DELETE :   
 
-            return state.filter( (index) => index !== action.data)
-
+            // 注意数据类型啊
+            return state.filter( (list, index) => index !== action.data )
         default :
             return state
     }

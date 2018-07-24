@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-import Header from '../components/headfoot/header';
-import Footer from '../components/headfoot/footer';
-import ContainerLeft from '../components/containerLeft';
-import ContainerRight from '../components/containerRight';
+import Header from '../components/headfoot/header'
+import Footer from '../components/headfoot/footer'
+import ContainerLeft from '../components/containerLeft'
+import ContainerRight from '../components/containerRight'
 
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
@@ -17,10 +17,8 @@ class App extends Component {
         list: PropTypes.array.isRequired
     }
 
-
-
     render(){
-        let {list, childUpdateFn, removeFn} = this.props;
+        let {list, childUpdateFn, removeFn} = this.props
 
         return (
             <div>

@@ -7,8 +7,8 @@ export default class ContainerRight extends Component {
     removeFn = (event) => {
         let index = event.target.parentNode.getAttribute('index');
 
-
-        this.props.removeFn(index);
+        // 注意数据类型啊
+        this.props.removeFn(Number(index));
     }
     
     render(){

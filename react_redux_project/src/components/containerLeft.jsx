@@ -10,14 +10,10 @@ export default class Container extends Component {
             name:'',
             content:''
         }
-
-        this.submitFn = this.submitFn.bind(this);
-        this.nameFn = this.nameFn.bind(this);
-        this.contentFn = this.contentFn.bind(this);
     }
 
     // 提交
-    submitFn(event){
+    submitFn = event => {
         let name = this.state.name.trim();
         let content = this.state.content.trim();
 
@@ -36,13 +32,13 @@ export default class Container extends Component {
     }
 
     // name输入框
-    nameFn(event){
+    nameFn = event => {
         let name = event.target.value;
         this.setState({ name });
     }
 
     // 描述输入框
-    contentFn(event){
+    contentFn = event => {
         let content = event.target.value;
         this.setState({ content });
     }
