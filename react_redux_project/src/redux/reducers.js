@@ -5,6 +5,7 @@
 
 import { DELETE, UPDATE } from './action-types'
 
+// state 初始状态
 const initlist = [
     {name:'123', content:'111'},
     {name:'123', content:'111'}
