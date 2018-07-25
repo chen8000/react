@@ -7,14 +7,21 @@ import ContainerRight from '../components/containerRight'
 
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { childUpdateFn, removeFn } from '../redux/actions'
+import { childUpdateFn, removeFn, getComments } from '../redux/actions'
 
 class App extends Component {
+
+    componentDidMount(){
+        // 异步
+        this.props.getComments()
+    }
+
 
     static propTypes = {
         childUpdateFn: PropTypes.func.isRequired,
         removeFn: PropTypes.func.isRequired,
-        list: PropTypes.array.isRequired
+        list: PropTypes.array.isRequired,
+        getComments : PropTypes.func.isRequired
     }
 
     render(){
@@ -40,5 +47,5 @@ class App extends Component {
 }
 
 export default connect(
-    state => ({list:state}), { childUpdateFn, removeFn }
+    state => ({list:state}), { childUpdateFn, removeFn, getComments }
 )(App)
