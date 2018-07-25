@@ -3,12 +3,14 @@
     根据老的state和action返回一个新的state
 */ 
 
+import { combineReducers } from 'redux'
+
 import { DELETE, UPDATE, GETRES } from './action-types'
 
 // state 初始状态
 const initlist = []
 
-export function counter(state = initlist, action) {
+function counter(state = initlist, action) {
 
     switch(action.type){
 
@@ -24,12 +26,15 @@ export function counter(state = initlist, action) {
             return state.filter( (list, index) => index !== action.data )
         case GETRES :
             return action.data
-            
+
         default :
             return state
     }
 
 }
+
+
+export default combineReducers({counter})
 
 
 

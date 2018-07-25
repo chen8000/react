@@ -47,5 +47,5 @@ class App extends Component {
 }
 
 export default connect(
-    state => ({list:state}), { childUpdateFn, removeFn, getComments }
+    state => ({list:state.counter}), { childUpdateFn, removeFn, getComments }
 )(App)
