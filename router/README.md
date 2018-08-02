@@ -1,23 +1,23 @@
 
 # 路由标签
 ## 1. 带#和不带#的两种
-   * <BrowserRouter>  
-   * <HashRouter>
+   * \<BrowserRouter>  
+   * \<HashRouter>
 
 ## 2. 路由
-   * <Route>
+   * \<Route>
 
 ## 3. 路由重定向
-   * <Redirect>
+   * \<Redirect>
 
 ## 4. 路由连接
-   * <Link>
+   * \<Link>
  
 ## 5. 导航路由
-   * <NavLink>
+   * \<NavLink>
 
 ## 6. 交换路由切换路由
-   * <Switch>
+   * \<Switch>
 
 
 # 二：对象
